@@ -36,6 +36,7 @@ h1 {
   font-size: 2rem;
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
+  color: #4CAF50; /* Added color for X and O */
 }
 
 .square:hover {
