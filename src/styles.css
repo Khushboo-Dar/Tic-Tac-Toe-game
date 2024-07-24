@@ -108,6 +108,39 @@ button:active {
   transform: scale(0.95);
 }
 
+/* Game Info Styles */
+.game-info {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.game-info ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.game-info button {
+  margin: 5px 0;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background: #FF9800;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.game-info button:hover {
+  background: #FB8C00;
+  transform: scale(1.05);
+}
+
+.game-info button:active {
+  background: #F57C00;
+  transform: scale(0.95);
+}
+
 /* Other Enhancements */
 header {
   margin-bottom: 20px;
