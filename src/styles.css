@@ -1,12 +1,160 @@
+/* Base Styles */
+body {
+  background: linear-gradient(to bottom right, #4caf50, #81c784);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
 .App {
-  font-family: sans-serif;
   text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
 }
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Square Styles */
 .square {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 2px solid #4caf50;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+  color: #4caf50; /* Added color for X and O */
 }
-.ol{
-  width:30px;
-  height:30px;
+
+.square:hover {
+  background: #e8f5e9;
+  transform: scale(1.1);
+}
+
+.square:active {
+  transform: scale(0.9);
+}
+
+/* Board Styles */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 220px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .square {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Winning Animation */
+.win .square {
+  background: #ffeb3b;
+  animation: winAnim 1s infinite alternate;
+}
+
+@keyframes winAnim {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Reset Button */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: #4caf50;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+button:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+button:active {
+  background: #2e7d32;
+  transform: scale(0.95);
+}
+
+/* Game Info Styles */
+.game-info {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.game-info ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.game-info button {
+  margin: 5px 0;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background: #ff9800;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.game-info button:hover {
+  background: #fb8c00;
+  transform: scale(1.05);
+}
+
+.game-info button:active {
+  background: #f57c00;
+  transform: scale(0.95);
+}
+
+/* Other Enhancements */
+header {
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
 }
